@@ -1,0 +1,349 @@
+{
+	"info": {
+		"_postman_id": "fe1c6359-7413-46b2-a2cb-bbaf7f31eab7",
+		"name": "MiniBid System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Mary\",\r\n    \"username\":\"MaryTest\",\r\n    \"email\":\"Mary@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"Nick@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/user/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Items-GetAll",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjNhNjAzZDVjZWY1YjBjNjM5MzQwMGEiLCJpYXQiOjE2NDgxNDY5MjF9.rw6YbY1iDlt3ySGbP0wAfD__11vAzpqJUnUsZh7_p6E",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/items/getAll",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"items",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Items-GetAll-Detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjNhNjA5YzVjZWY1YjBjNjM5MzQwMTAiLCJpYXQiOjE2NDc5OTMwNjB9.mOkeanqkU1le4JQcWlDc7D3gJ1NccIasyiPOYsPMFac",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/items/getAllDetail",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"items",
+						"getAllDetail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Items-Single Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjNhNjA5YzVjZWY1YjBjNjM5MzQwMTAiLCJpYXQiOjE2NDc5OTMwNjB9.mOkeanqkU1le4JQcWlDc7D3gJ1NccIasyiPOYsPMFac",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"itemid\" :  \"623b4183420cb26c7e43ed11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/items/getDetailSingle",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"items",
+						"getDetailSingle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Items-GetOpen",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjM4OWU0Njc5Nzk5ZjBhNTQ5MzhiZDkiLCJpYXQiOjE2NDc4Nzc3MTZ9.H191Tw0Ra8zVnpfD6ItIrfKYkbyGSfVE2_VRCtBzEXg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/items/getOpen",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"items",
+						"getOpen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Items-getClosed",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjM4OWU0Njc5Nzk5ZjBhNTQ5MzhiZDkiLCJpYXQiOjE2NDc4Nzc3MTZ9.H191Tw0Ra8zVnpfD6ItIrfKYkbyGSfVE2_VRCtBzEXg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/items/getClosed",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"items",
+						"getClosed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Items-AddItem",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjNhNjAzZDVjZWY1YjBjNjM5MzQwMGEiLCJpYXQiOjE2NDgwNTA4Mjd9.y1vzSmoYPRPdagZ-OpoHzqkzzANrezQYGhi_IaLhuJo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"item_title\" : \"Mary's LaptopS ASDASHDHJSAD\" ,\r\n    \"item_condition\" : \"NEW\" ,\r\n    \"item_ownerinfo\" : \"This is my Laptop it was a birthday present but i didnt like it\",\r\n    \"item_auctionexpiration\" :  \"2022-03-25\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/items/add",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"items",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auction-AddAuction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjNhNjA3OTVjZWY1YjBjNjM5MzQwMGQiLCJpYXQiOjE2NDgxNDgwMTh9.DQVojDLAtxa_n2hmeqNO4niJPahVk-4ZUa72OZlAFHQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"auction_itemid\" : \"623cbd41c8a89245c047edac\" ,\r\n    \"auction_price\" :  129\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/auctions/add",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auctions",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auction-Close",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/auctions/close",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auctions",
+						"close"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auction-Get Historical Data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjM4OWU0Njc5Nzk5ZjBhNTQ5MzhiZDkiLCJpYXQiOjE2NDc4Nzc3MTZ9.H191Tw0Ra8zVnpfD6ItIrfKYkbyGSfVE2_VRCtBzEXg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"itemid\" : \"623cbd41c8a89245c047edac\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/auctions/ById",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auctions",
+						"ById"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
