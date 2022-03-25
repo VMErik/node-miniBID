@@ -1,22 +1,21 @@
 # node-miniBID
-Este es un mini proyecto de subasta realizado en **Node JS**, incluye autenticacion con **JWT** y conexión con **mongoDB Cloud**
 
-Dentro de la carpeta raiz se envuentra el archivo **".env"** en el cual haremos la configuracion y la asignacion de las variables conforme lo necesitemos. 
-Debemos de especificar la ruta de nuestra coleccion en MongoDB Cloud, asi como el "secret" con el cual firmaremos nuestro token. 
+This is a mini auction project made in **Node JS**, includes **JWT** authentication and connection to **mongoDB Cloud**
 
-Tambien podremos encontrar el archivo **"MiniBid System.postman_collection"** que incluye la coleccion en Postman para el testeo de los endpoints definidos en los archivos Routes del proyecto. 
+Inside the root folder is the **".env"** file in which we will configure and assign the variables as needed. We must specify the path of our collection in MongoDB Cloud, as well as the "secret" with which we will sign our token.
 
+We can also find the **"MiniBid System.postman_collection"** file that includes the Postman collection for testing the endpoints defined in the project's Routes files.
 
-Dentro del archivo **"commands.md"** encontraremos los comandos de ejecucion para la instalacion de las librerias que utilizamos en el proyecto. 
+Inside the file **"commands.md"** we will find the execution commands for the installation of the libraries that we use in the project.
 
-##Necesary library to implement the server 
+##Library needed to implement server 
 npm install express nodemon mongoose dotenv body-parser
 
 ##Install for validations 
 npm install joi
 
-##Install for encrypt/decrypt password 
+##Install to encrypt/decrypt password 
 npm install bcryptjs
 
-##Install for generate JWT 
+##Install to generate JWT 
 npm install jsonwebtoken
